@@ -6,7 +6,6 @@ pipeline{
         TESTING_ENVIRONMENT= "Name of Testing Environment is Student Assignment"
         PRODUCTION_ENVIRONMENT="Name of Production Environment is Sumi Verma"
     }
-    stages{
         stage ('Build'){
             steps{
                 echo "Build has Started after Commit"
@@ -31,7 +30,7 @@ pipeline{
                     body: "Build was not Successful"
                 }*/
             }
-        }
+        
         stage ('Unit and Integration Test'){
             steps{
                 echo "Unit Tests Started and Completed in Testing Environment $TESTING_ENVIRONMENT"
